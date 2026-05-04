@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>Task Manager</h1>
+          <p class="subtitle">Simple full-stack app with auth</p>
+        </div>
+        <div class="session-badge" id="session-status">Logged out</div>
+      </header>
+
+      <main class="grid">
+        <section class="panel">
+          <h2>Sign Up</h2>
+          <input id="signup-name" placeholder="Name" />
+          <input id="signup-age" type="number" placeholder="Age" />
+          <input id="signup-email" placeholder="Email" />
+          <input id="signup-password" type="password" placeholder="Password" />
+          <button id="signup-btn">Sign Up</button>
+          <p id="signup-msg" class="message"></p>
+        </section>
+
+        <section class="panel">
+          <h2>Login</h2>
+          <input id="login-email" placeholder="Email" />
+          <input id="login-password" type="password" placeholder="Password" />
+          <button id="login-btn">Login</button>
+          <p id="login-msg" class="message"></p>
+        </section>
+
+        <section class="panel">
+          <h2>Account</h2>
+          <div class="button-row">
+            <button id="me-btn">Who Am I?</button>
+            <button id="logout-btn">Logout</button>
+            <button id="logout-all-btn">Logout All</button>
+          </div>
+          <pre id="output"></pre>
+        </section>
+
+        <section class="panel panel-wide">
+          <h2>Tasks</h2>
+          <div class="task-create">
+            <input id="task-title" placeholder="Task title" />
+            <button id="create-task-btn">Create Task</button>
+            <button id="refresh-tasks-btn">Refresh Tasks</button>
+          </div>
+          <p id="task-msg" class="message"></p>
+          <div id="task-list" class="task-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
